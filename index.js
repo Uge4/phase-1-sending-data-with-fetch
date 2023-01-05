@@ -1,10 +1,9 @@
 // Add your code here
 function submitData(name, email){
+    
     let user = {}
     user.name = name
     user.email = email
-    
-       
 
     let response = fetch('http://localhost:3000/users', {
         
