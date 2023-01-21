@@ -19,7 +19,10 @@ function submitData(name, email){
     .then(user => document.body.innerHTML = user.id)
     .catch(error => {
         let message = 'Unauthorized Access'
-        document.body.innerHtml = message
+        let p = document.createElement("p")
+        p.innerHTML = message
+        document.body.appendChild(p)
+        return Promise.reject()
     })
 
     return response
